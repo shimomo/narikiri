@@ -7,6 +7,7 @@ import (
 )
 
 type Ngrok struct {
+	BaseURL string
 	Tunnels []struct {
 		PublicURL string `json:"public_url"`
 		Proto     string `json:"proto"`
@@ -23,7 +24,7 @@ func (n *Ngrok) FetchHttpURL() (string, error) {
 
 func (n *Ngrok) FetchURL(proto string) (string, error) {
 	var url string
-	res, err := http.Get("http://localhost:4040/api/tunnels")
+	res, err := http.Get(n.BaseURL+"/api/tunnels")
 	if err != nil {
 		return url, err
 	}
