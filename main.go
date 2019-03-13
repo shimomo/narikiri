@@ -4,10 +4,12 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/urfave/cli"
 )
 
 func main() {
+	godotenv.Load()
 	app := cli.NewApp()
 	app.Name = "sync"
 	app.Usage = "fight the loneliness!"
