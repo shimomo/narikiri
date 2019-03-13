@@ -16,6 +16,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "key, k",
+			Value: os.Getenv("STRIPE_TEST_SECRET_KEY"),
 			Usage: "Stripe test secret key.",
 		},
 	}
