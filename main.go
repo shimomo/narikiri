@@ -12,7 +12,7 @@ func main() {
 	godotenv.Load()
 	app := cli.NewApp()
 	app.Name = "narikiri"
-	app.Usage = "fight the loneliness!"
+	app.Usage = "Synchronize the stripe webhook and ngrok URLs."
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "key, k",
