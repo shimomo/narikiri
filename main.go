@@ -11,7 +11,7 @@ import (
 func main() {
 	godotenv.Load()
 	app := cli.NewApp()
-	app.Name = "sync"
+	app.Name = "narikiri"
 	app.Usage = "fight the loneliness!"
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
