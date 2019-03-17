@@ -1,4 +1,8 @@
-.editorconfig
+# Ignore metadata file.
+.DS_Store
+
+# Ignore environment variable file.
 .env
-narikiri*
-capture*
+
+# Ignore backup directory.
+/1.0.0/
