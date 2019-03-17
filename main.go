@@ -13,7 +13,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "narikiri"
 	app.Version = "1.0.0"
-	app.Usage = "Synchronize the stripe webhook and ngrok URLs."
+	app.Usage = "Stripe and ngrok synchronization command."
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "key, k",
