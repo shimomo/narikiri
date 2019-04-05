@@ -23,7 +23,10 @@ func main() {
 	}
 	app.Action = func(c *cli.Context) error {
 		ngrok := &Ngrok{BaseURL: "http://localhost:4040"}
-		url, _ := ngrok.FetchHttpsURL()
+		url, e := ngrok.FetchHttpsURL()
+		if e != nil {
+			return e
+		}
 		stripe := &Stripe{SecretKey: c.String("key")}
 		err := stripe.ReplaceURLs(url)
 		return err
